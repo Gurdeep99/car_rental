@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>PROMISE WITH CALLBACK FUNCTION</title>
+</head>
+<body>
+<p>THIS IS PROMISE AND ASYNCH AWAIT</p>
+<script>
+document.write("START");
+document.write("<br>");
+function getName(name,callback)
+{
+setTimeout(()=> {
+document.write("MY NAME IS: <br>");
+callback(name);
+},3000);
+}
+function getHobbies(name,callback)
+{
+setTimeout(()=>{
+document.write("<br>");
+document.write("MY HOBBIES IS: <br>");
+callback(['CRICKET','CHESS','PROGRAMMING']);
+},3000);
+}
+const nm = getName('JAGGU' , (nm) => {document.write(nm)
+getHobbies(nm, (hobby) => {document.write(hobby) })});
+
+
+document.write("<br>");
+document.write("END");
+
+</script>
+<p>THE CHAINSMOKER</p>
+</body>
+</html>
